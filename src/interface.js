@@ -4,6 +4,7 @@ $(document).ready(function() {
   updateSaverState();
 
   displayWeather('London');
+  $('#city').text("London");
 
   $('#select-city').submit(function(event) {
     event.preventDefault();

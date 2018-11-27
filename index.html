@@ -8,19 +8,21 @@
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body>
-    <h1>Current temperature in <span id="city"></span>: <span id="current-temperature"></span>ºC</h1>
-    <form id="select-city">
-      <input id="current-city" type="text" placeholder="Enter a city"></input>
-      <input type="submit"></input>
-    </form>
-    <h2 id="temperature"></h2>
-    <button type="button" id="up">+</button>
-    <button type="button" id="down">-</button>
-    <button type="button" id="reset">Reset</button>
-    <br>
-    <h2>Power Saver</h2>
-    <button type="button" id="power-saver">Toggle</button>
-
+  <body align="center">
+    <div class="box">
+      <h1 class="center">Current temperature in <span id="city"></span>: <span id="current-temperature"></span>ºC</h1>
+      <form id="select-city" class="center">
+        <input id="current-city" type="text" placeholder="Enter a city" class="textbox"></input>
+        <br><br>
+        <input type="submit" class="button"></input>
+      </form>
+      <h1 id="temperature" class="center button"></h1>
+      <button type="button" id="up" class="center button">+</button>
+      <button type="button" id="down" class="center button">-</button>
+      <button type="button" id="reset" class="center button">Reset</button>
+      <br>
+      <h2>Power Saver</h2>
+      <button type="button" id="power-saver" class="button">Toggle</button>
+    </div>
   </body>
 </html>
