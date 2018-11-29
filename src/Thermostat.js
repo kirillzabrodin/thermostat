@@ -7,8 +7,17 @@ function Thermostat() {
   this.DEFAULT_TEMP = 20
   this.temp = this.DEFAULT_TEMP
   this.saver = true
+  this.city = "London"
 
 }
+
+Thermostat.prototype.setCity = function (city) {
+  this.city = city;
+};
+
+Thermostat.prototype._setTemperature = function (num) {
+  this.temp = num
+};
 
 Thermostat.prototype.up = function () {
   if(this.isMaximumTemperature()) {
@@ -29,6 +38,12 @@ Thermostat.prototype.saverToggle = function () {
     this.temp = this.MAXIMUM_TEMPERATURE_SAVER_ON;
   }
   this.saver = !this.saver;
+};
+
+Thermostat.prototype._setSaverState = function (state) {
+  if(state === true || state === false) {
+    this.saver = state;
+  }
 };
 
 Thermostat.prototype.saverState = function () {
@@ -68,7 +83,6 @@ Thermostat.prototype.maxTemperature = function () {
 };
 
 Thermostat.prototype.isMaximumTemperature = function () {
-  console.log(this.maxTemperature());
   return this.temp >= this.maxTemperature();
 };
 
